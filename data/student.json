@@ -1,0 +1,123 @@
+[
+  {
+    "age": 21,
+    "programme": "Web & UX Level 6",
+    "ethnicity": "Pakeha",
+    "suburb": "Aro Valley",
+    "food": "Subway",
+    "color": "Blue",
+    "animal": "Meerkat",
+    "printing credit": "$10",
+    "printing credit top up": "No"
+  },
+  {
+    "age": 24,
+    "programme": "Web & Graphic Level 5",
+    "ethnicity": "Pakeha",
+    "suburb": "Te Aro",
+    "food": "McDonalds",
+    "color": "Pink",
+    "animal": "Octopus",
+    "printing credit": "$2",
+    "printing credit top up": "No"
+  },
+  {
+    "age": 20,
+    "programme": "Graphic Design",
+    "ethnicity": "Pakeha",
+    "suburb": "Aro Valley",
+    "food": "Sushi B",
+    "color": "Blue",
+    "animal": "Cat",
+    "printing credit": "$82",
+    "printing credit top up": "No"
+  },
+  {
+    "age": 18,
+    "programme": "Animation & Film",
+    "ethnicity": "Pakeha",
+    "suburb": "Horowhenua",
+    "food": "Subway",
+    "color": "Purple",
+    "animal": "Panda",
+    "printing credit": "$30",
+    "printing credit top up": "No"
+  },
+  {
+    "age": 17,
+    "programme": "Animation & Film",
+    "ethnicity": "Pakeha",
+    "suburb": "Karori",
+    "food": "McDonalds",
+    "color": "Red",
+    "animal": "Owl",
+    "printing credit": "$35",
+    "printing credit top up": "NO"
+  },
+  {
+    "age": 19,
+    "programme": "Web & Graphic Level 5",
+    "ethnicity": "Pakeha",
+    "suburb": "Greytown",
+    "food": "New World",
+    "color": "Orange",
+    "animal": "Bear",
+    "printing credit": "$60",
+    "printing credit top up": "No"
+  },
+  {
+    "age": 37,
+    "programme": "Animation & Film",
+    "ethnicity": "Pakeha",
+    "suburb": "Lyall Bay",
+    "food": "McDonalds",
+    "color": "Red",
+    "animal": "Wolf",
+    "printing credit": "$34.70",
+    "printing credit top up": "No"
+  },
+  {
+    "age": 20,
+    "programme": "Animation & Film",
+    "ethnicity": "West Indian",
+    "suburb": "Upper Hutt",
+    "food": "Subway",
+    "color": "Purple",
+    "animal": "Snow Leopard",
+    "printing credit": "$31.91",
+    "printing credit top up": "No"
+  },
+  {
+    "age": 17,
+    "programme": "iCreate",
+    "ethnicity": "Pakeha",
+    "suburb": "Karori",
+    "food": "McDonalds",
+    "color": "Red",
+    "animal": "Dog",
+    "printing credit": "$26.72",
+    "printing credit top up": "No"
+  },
+  {
+    "age": 18,
+    "programme": "iCreate",
+    "ethnicity": "Pakeha",
+    "suburb": "Wellington CBD",
+    "food": "none",
+    "color": "White",
+    "animal": "Tiger",
+    "printing credit": "$26.69",
+    "printing credit top up": "No"
+  },
+  {
+    "age": 25,
+    "programme": "Web & UX Level 6",
+    "ethnicity": "Fiji-Indian",
+    "suburb": "Grenada Village",
+    "food": "McDonalds",
+    "color": "Blue",
+    "animal": "Lion",
+    "printing credit": "$10",
+    "printing credit top up": "No"
+  }
+]
