@@ -1,0 +1,28 @@
+{
+  "name": "yoobeestudents-formative",
+  "version": "1.0.0",
+  "description": "Yoobee data collection",
+  "main": "index.html",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.1.3",
+    "popper.js": "^1.14.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reddyadi/yoobeeStudents-formative.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Daniel Rhodes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reddyadi/yoobeeStudents-formative/issues"
+  },
+  "homepage": "https://github.com/reddyadi/yoobeeStudents-formative#readme"
+}
