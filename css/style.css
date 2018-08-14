@@ -16,13 +16,46 @@
   width: 100%;
   /* background-color: #C0C0C0; */
   border-bottom: 8px solid black;
-
+  margin-bottom: 2%;
 }
 
 #mainContainer .graph-border {
   margin-top: 4%;
 }
 
-#mainContainer .graphContainer .graphSize {
+#mainContainer .graphContainer #graph1 {
+  height: 90%;
+  width: 70%;
+  background-color: #65655E;
+  float: left;
+}
 
+#mainContainer .graphContainer #graph2 {
+  height: 90%;
+  width: 70%;
+  background-color: #65655E;
+  float: left;
+}
+
+#mainContainer .graphContainer #graph3 {
+  height: 90%;
+  width: 70%;
+  background-color: #65655E;
+  float: left;
+}
+
+#mainContainer .graphContainer #graph4 {
+  height: 90%;
+  width: 70%;
+  background-color: #65655E;
+  float: left;
+}
+
+#mainContainer .graphContainer .textContainer {
+  float: left;
+  margin-left: 5%;
+  margin-top: 3%;
+  /* background-color: #B79492; */
+  height: 70%;
+  width: 20%;
 }
