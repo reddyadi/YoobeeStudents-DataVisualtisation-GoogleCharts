@@ -21,11 +21,12 @@ function drawChart(){
   console.log('packages have been loaded');
 
   const data = google.visualization.arrayToDataTable([
-      ['Web & Graphic','Web & UX','Graphic Design','Animation & Film'],
-      ['2013', 58719, 29568, 19237],
-      ['2014', 57243, 31062, 20125],
-      ['2015', 61038, 31608, 19947],
-      ['2016', 59430, 31176, 20235]
+      ['Web & Graphic','Web & UX','Graphic Design','Animation & Film', 'iCreate'],
+      ['Web & Graphic', 58719, 29568, 19237],
+      ['Web & UX', 57243, 31062, 20125],
+      ['Graphic Design', 61038, 31608, 19947],
+      ['Animation & Film', 59430, 31176, 20235],
+      ['iCreate']
 
   ])
 
