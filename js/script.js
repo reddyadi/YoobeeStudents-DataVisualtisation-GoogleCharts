@@ -6,11 +6,17 @@
     success: function(results){
       for (var i = 0; i < results.length; i++) {
         var student = {
+          id: results[i].id,
           age: results[i].age,
           programme: results[i].programme,
           ethnicity: results[i].ethnicity,
           suburb: results[i].suburb,
-          food: results[i].food
+          food: results[i].food,
+          color: results[i].color,
+          animal: results[i].animal,
+          printing_credit: results[i].printingCredit,
+          printing_topup: results[i].printingCreditTopUp,
+          distance: results[i].distanceToCampus
         }
         data.push(student);
         console.log(data);

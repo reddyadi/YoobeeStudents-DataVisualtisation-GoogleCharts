@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "age": 21,
     "programme": "Web & UX Level 6",
     "ethnicity": "Pakeha",
@@ -7,10 +8,12 @@
     "food": "Subway",
     "color": "Blue",
     "animal": "Meerkat",
-    "printing credit": "$10",
-    "printing credit top up": "No"
+    "printingCredit": "$10",
+    "printingCreditTopUp": "No",
+    "distanceToCampus": 3.8
   },
   {
+    "id": 2,
     "age": 24,
     "programme": "Web & Graphic Level 5",
     "ethnicity": "Pakeha",
@@ -18,10 +21,12 @@
     "food": "McDonalds",
     "color": "Pink",
     "animal": "Octopus",
-    "printing credit": "$2",
-    "printing credit top up": "No"
+    "printingCredit": "$2",
+    "printingCreditTopUp": "No",
+    "distanceToCampus": 2.0
   },
   {
+    "id": 3,
     "age": 20,
     "programme": "Graphic Design",
     "ethnicity": "Pakeha",
@@ -29,10 +34,12 @@
     "food": "Sushi B",
     "color": "Blue",
     "animal": "Cat",
-    "printing credit": "$82",
-    "printing credit top up": "No"
+    "printingCredit": "$82",
+    "printingCreditTopUp": "No",
+    "distanceToCampus": 3.8
   },
   {
+    "id": 4,
     "age": 18,
     "programme": "Animation & Film",
     "ethnicity": "Pakeha",
@@ -40,10 +47,12 @@
     "food": "Subway",
     "color": "Purple",
     "animal": "Panda",
-    "printing credit": "$30",
-    "printing credit top up": "No"
+    "printingCredit": "$30",
+    "printingCreditTopUp": "No",
+    "distanceToCampus": 92.1
   },
   {
+    "id": 5,
     "age": 17,
     "programme": "Animation & Film",
     "ethnicity": "Pakeha",
@@ -51,10 +60,12 @@
     "food": "McDonalds",
     "color": "Red",
     "animal": "Owl",
-    "printing credit": "$35",
-    "printing credit top up": "NO"
+    "printingCredit": "$35",
+    "printingCreditTopUp": "No",
+    "distanceToCampus": 5.0
   },
   {
+    "id": 6,
     "age": 19,
     "programme": "Web & Graphic Level 5",
     "ethnicity": "Pakeha",
@@ -62,10 +73,12 @@
     "food": "New World",
     "color": "Orange",
     "animal": "Bear",
-    "printing credit": "$60",
-    "printing credit top up": "No"
+    "printingCredit": "$60",
+    "printingCreditTopUp": "No",
+    "distanceToCampus": 73.8
   },
   {
+    "id": 7,
     "age": 37,
     "programme": "Animation & Film",
     "ethnicity": "Pakeha",
@@ -73,10 +86,12 @@
     "food": "McDonalds",
     "color": "Red",
     "animal": "Wolf",
-    "printing credit": "$34.70",
-    "printing credit top up": "No"
+    "printingCredit": "$34.70",
+    "printingCreditTopUp": "No",
+    "distanceToCampus": 7.2
   },
   {
+    "id": 8,
     "age": 20,
     "programme": "Animation & Film",
     "ethnicity": "West Indian",
@@ -84,10 +99,12 @@
     "food": "Subway",
     "color": "Purple",
     "animal": "Snow Leopard",
-    "printing credit": "$31.91",
-    "printing credit top up": "No"
+    "printingCredit": "$31.91",
+    "printingCreditTopUp": "No",
+    "distanceToCampus": 32.2
   },
   {
+    "id": 9,
     "age": 17,
     "programme": "iCreate",
     "ethnicity": "Pakeha",
@@ -95,10 +112,12 @@
     "food": "McDonalds",
     "color": "Red",
     "animal": "Dog",
-    "printing credit": "$26.72",
-    "printing credit top up": "No"
+    "printingCredit": "$26.72",
+    "printingCreditTopUp": "No",
+    "distanceToCampus": 5.0
   },
   {
+    "id": 10,
     "age": 18,
     "programme": "iCreate",
     "ethnicity": "Pakeha",
@@ -106,10 +125,12 @@
     "food": "none",
     "color": "White",
     "animal": "Tiger",
-    "printing credit": "$26.69",
-    "printing credit top up": "No"
+    "printingCredit": "$26.69",
+    "printingCreditTopUp": "No",
+    "distanceToCampus": 0.9
   },
   {
+    "id": 11,
     "age": 25,
     "programme": "Web & UX Level 6",
     "ethnicity": "Fiji-Indian",
@@ -117,7 +138,8 @@
     "food": "McDonalds",
     "color": "Blue",
     "animal": "Lion",
-    "printing credit": "$10",
-    "printing credit top up": "No"
+    "printingCredit": "$10",
+    "printingCreditTopUp": "No",
+    "distanceToCampus": 12.8
   }
 ]
