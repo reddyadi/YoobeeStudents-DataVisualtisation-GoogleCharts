@@ -31,162 +31,94 @@
 
 
 
-// SCATTER CHART  DISTANCE FROM WHERE PEOPLE LIVE
-// GRAPH 1
+  // SCATTER CHART  DISTANCE FROM WHERE PEOPLE LIVE
+  // GRAPH 1
 
-    function drawChart() {
-          var data1 = google.visualization.arrayToDataTable([
-            ['Student', 'Distance to Campus'],
-            [ data[0].id, data[0].distance],
-            [ data[1].id, data[1].distance],
-            [ data[2].id, data[2].distance],
-            [ data[3].id, data[3].distance],
-            [ data[4].id, data[4].distance],
-            [ data[5].id, data[5].distance],
-            [ data[6].id, data[6].distance],
-            [ data[7].id, data[7].distance],
-            [ data[8].id, data[8].distance],
-            [ data[9].id, data[9].distance],
-            [ data[10].id, data[10].distance]
-          ]);
+      function drawChart() {
+            var data1 = google.visualization.arrayToDataTable([
+              ['Student', 'Distance to Campus'],
+              [ data[0].id, data[0].distance],
+              [ data[1].id, data[1].distance],
+              [ data[2].id, data[2].distance],
+              [ data[3].id, data[3].distance],
+              [ data[4].id, data[4].distance],
+              [ data[5].id, data[5].distance],
+              [ data[6].id, data[6].distance],
+              [ data[7].id, data[7].distance],
+              [ data[8].id, data[8].distance],
+              [ data[9].id, data[9].distance],
+              [ data[10].id, data[10].distance]
+            ]);
 
-          var options = {
-            hAxis: {title: 'Student', minValue: 0, maxValue: 11},
-            vAxis: {title: 'Distance (KM)', minValue: 0, maxValue: 100},
-            legend: 'none'
-          };
+            var options = {
+              hAxis: {title: 'Student', minValue: 0, maxValue: 11},
+              vAxis: {title: 'Distance (KM)', minValue: 0, maxValue: 100},
+              legend: 'none'
+            };
 
-          var chart = new google.visualization.ScatterChart(document.getElementById('graph1'));
+            var chart = new google.visualization.ScatterChart(document.getElementById('graph1'));
 
-          chart.draw(data1, options);
-        }
+            chart.draw(data1, options);
+          }
 
 
-// PIE CHART   COURSE / PRINTING COST
-// GRAPH 2
-     function drawChartpie() {
+  // PIE CHART   COURSE / PRINTING COST
+  // GRAPH 2
 
-       var data = google.visualization.arrayToDataTable([
-         ['Colours', 'Number of Students'],
-         ['Blue', 3],
-         ['Red', 3],
-         ['Pink', 1],
-         ['Purple', 1],
-         ['White', 1],
-         ['Orange', 1]
-       ]);
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChartpie);
 
-       var options = {
-         // title: 'Students Favourite Colours',
-         pieHole: 0.5,
-         legend: {
-           position: 'none'
-         }
+       function drawChartpie() {
+
+         var data = google.visualization.arrayToDataTable([
+           ['Colours', 'Number of Students'],
+           ['Blue', 3],
+           ['Red', 3],
+           ['Pink', 1],
+           ['Purple', 1],
+           ['White', 1],
+           ['Orange', 1]
+         ]);
+
+         var options = {
+           // title: 'Students Favourite Colours',
+           pieHole: 0.5,
+           legend: {
+             position: 'none'
+           }
+         };
+
+         var chart = new google.visualization.PieChart(document.getElementById('graph2'));
+
+         chart.draw(data, options);
        };
 
-       var chart = new google.visualization.PieChart(document.getElementById('graph2'));
 
-       chart.draw(data, options);
-     };
+  // COLUMN CHART   FAV FOOD PALCES AROUND CAMPUS
+  // GRAPH 3
 
+  google.charts.load("current", {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChartbar);
+  function drawChartbar() {
+    var data = google.visualization.arrayToDataTable([
+      ['Favourite PLace', 'Number of Students'],
+      ['McDonalds', 5],
+      ['Subway', 3],
+      ['Sushi B', 1],
+      ['New World', 1]
 
-// COLUMN CHART   FAV FOOD PALCES AROUND CAMPUS
-// GRAPH 3
+    ]);
 
-google.charts.load("current", {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChartbar);
-function drawChartbar() {
-  var data = google.visualization.arrayToDataTable([
-    ['Favourite PLace', 'Number of Students'],
-    ['McDonalds', 5],
-    ['Subway', 3],
-    ['Sushi B', 1],
-    ['New World', 1]
+    var options = {
+      legend: {
+        position: 'none'
+      },
+      vAxis: {title: 'Students'},
+    }
 
-  ]);
-
-  var options = {
-    legend: {
-      position: 'none'
-    },
-    vAxis: {title: 'Students'},
-  }
-
-  var chart = new google.visualization.ColumnChart(document.getElementById("graph3"));
-  chart.draw(data, options);
- }
-
-
-    function drawChartpie() {
-      var data = google.visualization.arrayToDataTable([
-        ['Colours', 'Number of Students'],
-        ['Blue', 3],
-        ['Red', 3],
-        ['Pink', 1],
-        ['Purple', 1],
-        ['White', 1],
-        ['Orange', 1]
-      ]);
-
-      var options = {
-        // title: 'Students Favourite Colours',
-        pieHole: 0.5
-      };
-
-      var chart = new google.visualization.PieChart(document.getElementById('graph2'));
-
-      chart.draw(data, options);
-    };
-
-// GEO CHART FAV FOOD PALCES AROUND CAMPUS
-    function drawChartbar() {
-      var data = google.visualization.arrayToDataTable([
-        ['Favourite PLace', 'Number of Students'],
-        ['McDonalds', 1],
-        ['New World', 2],
-        ['Subway', 3],
-        ['Sushi B', 4]
-
-      ]);
-
-      var options = {
-        chart: {
-        }
-      };
-
-      var chart = new google.charts.Bar(document.getElementById('graph3'));
-
-      chart.draw(data, google.charts.Bar.convertOptions(options));
-    };
-
-//ScatterChart to show distance students travel
-  function drawChart() {
-        var data1 = google.visualization.arrayToDataTable([
-          ['Student', 'Distance to Campus'],
-          [ data[0].id, data[0].distance],
-          [ data[1].id, data[1].distance],
-          [ data[2].id, data[2].distance],
-          [ data[3].id, data[3].distance],
-          [ data[4].id, data[4].distance],
-          [ data[5].id, data[5].distance],
-          [ data[6].id, data[6].distance],
-          [ data[7].id, data[7].distance],
-          [ data[8].id, data[8].distance],
-          [ data[9].id, data[9].distance],
-          [ data[10].id, data[10].distance]
-        ]);
-
-        var options = {
-          title: 'Student vs. Distance to Campus',
-          hAxis: {title: 'Student', minValue: 0, maxValue: 11},
-          vAxis: {title: 'Distance (KM)', minValue: 0, maxValue: 100},
-          legend: 'none'
-        };
-
-        var chart = new google.visualization.ScatterChart(document.getElementById('graph1'));
-
-        chart.draw(data1, options);
-  }
+    var chart = new google.visualization.ColumnChart(document.getElementById("graph3"));
+    chart.draw(data, options);
+   }
 
 //BubbleChart showing student diversity
   function drawSeriesChart() {
