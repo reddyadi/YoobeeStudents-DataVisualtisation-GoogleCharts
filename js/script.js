@@ -19,9 +19,8 @@
           distance: results[i].distanceToCampus
         }
         data.push(student);
-        console.log(data);
-
       }
+        console.log(data);
     },
     error: function(error){
       console.log("ERROR");
@@ -29,44 +28,35 @@
     }
   });
 
+  function drawChart() {
+        var data1 = google.visualization.arrayToDataTable([
+          ['Student', 'Distance to Campus'],
+          [ data[0].id, data[0].distance],
+          [ data[1].id, data[1].distance],
+          [ data[2].id, data[2].distance],
+          [ data[3].id, data[3].distance],
+          [ data[4].id, data[4].distance],
+          [ data[5].id, data[5].distance],
+          [ data[6].id, data[6].distance],
+          [ data[7].id, data[7].distance],
+          [ data[8].id, data[8].distance],
+          [ data[9].id, data[9].distance],
+          [ data[10].id, data[10].distance]
+        ]);
 
-// BAR CHART  COURSE / PRINTING COST
+        var options = {
+          title: 'Student vs. Distance to Campus',
+          hAxis: {title: 'Student', minValue: 0, maxValue: 11},
+          vAxis: {title: 'Distance (KM)', minValue: 0, maxValue: 100},
+          legend: 'none'
+        };
 
-// google.charts.load('current', {packages: ['corechart']});
-// google.charts.setOnLoadCallback(drawChart);
-//
-// function drawChart(){
-//   console.log('packages have been loaded');
-//
-//   const data = google.visualization.arrayToDataTable([
-//       ['Web & Graphic','Web & UX','Graphic Design','Animation & Film'],
-//       ['2013', 58719, 29568, 19237],
-//       ['2014', 57243, 31062, 20125],
-//       ['2015', 61038, 31608, 19947],
-//       ['2016', 59430, 31176, 20235]
-//
-//   ])
-//
-//   const options = {
-//     title: 'Births, Deaths and Marrages from New Zealand',
-//     subtitle: 'From 2013 to 2017',
-//     hAxis: {
-//       title: 'Number'
-//     },
-//     vAxis: {
-//       title: 'Year'
-//     },
-//     legend: {
-//       position: 'in'
-//     }
-//
-//   }
-//
-//   const chart = new google.visualization.BarChart(document.getElementById('chartContainer'));
-//   chart.draw(data, options);
+        var chart = new google.visualization.ScatterChart(document.getElementById('graph1'));
+
+        chart.draw(data1, options);
+      }
 
 
 
-// }
 
 // END
