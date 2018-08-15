@@ -63,35 +63,34 @@
      };
 
 
-// GEO CHART   FAV FOOD PALCES AROUND CAMPUS
+// COL   FAV FOOD PALCES AROUND CAMPUS
+
+
+google.charts.load("current", {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChartbar);
+function drawChartbar() {
+  var data = google.visualization.arrayToDataTable([
+    ['Favourite PLace', 'Number of Students'],
+    ['McDonalds', 5],
+    ['New World', 1],
+    ['Subway', 3],
+    ['Sushi B', 1]
+
+  ]);
+
+  // var options = {
+  //   chart: {
+  //   }
+  // };
+
+  var chart = new google.visualization.ColumnChart(document.getElementById("graph3"));
+  chart.draw(data);
+ }
 
 
 
-google.charts.load('current', {'packages':['bar']});
-     google.charts.setOnLoadCallback(drawChartbar);
 
-     function drawChartbar() {
-       var data = google.visualization.arrayToDataTable([
-         ['Favourite PLace', 'Number of Students'],
-         ['McDonalds', 1],
-         ['New World', 2],
-         ['Subway', 3],
-         ['Sushi B', 4]
-
-       ]);
-
-       var options = {
-         chart: {
-         }
-       };
-
-       var chart = new google.charts.Bar(document.getElementById('graph3'));
-
-       chart.draw(data, google.charts.Bar.convertOptions(options));
-     };
-
-
-//
+// SCATTER CHART  DISTANCE FROM WHERE PEOPLE LIVE
 
 
   function drawChart() {
