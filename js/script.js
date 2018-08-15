@@ -107,16 +107,17 @@ function drawChartbar() {
   var data = google.visualization.arrayToDataTable([
     ['Favourite PLace', 'Number of Students'],
     ['McDonalds', 5],
-    ['New World', 1],
     ['Subway', 3],
-    ['Sushi B', 1]
+    ['Sushi B', 1],
+    ['New World', 1]
 
   ]);
 
   var options = {
     legend: {
       position: 'none'
-    }
+    },
+    vAxis: {title: 'Students'},
   }
 
   var chart = new google.visualization.ColumnChart(document.getElementById("graph3"));
