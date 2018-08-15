@@ -64,10 +64,6 @@
 
 // PIE CHART   COURSE / PRINTING COST
 // GRAPH 2
-
-    google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChartpie);
-
      function drawChartpie() {
 
        var data = google.visualization.arrayToDataTable([
