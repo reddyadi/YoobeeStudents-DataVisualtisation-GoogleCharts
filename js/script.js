@@ -55,7 +55,6 @@
           ]);
 
           var options = {
-            title: 'Student vs. Distance to Campus',
             hAxis: {title: 'Student', minValue: 0, maxValue: 11},
             vAxis: {title: 'Distance (KM)', minValue: 0, maxValue: 100},
             legend: 'none'
@@ -87,7 +86,10 @@
 
        var options = {
          // title: 'Students Favourite Colours',
-         pieHole: 0.5
+         pieHole: 0.5,
+         legend: {
+           position: 'none'
+         }
        };
 
        var chart = new google.visualization.PieChart(document.getElementById('graph2'));
@@ -111,9 +113,14 @@ function drawChartbar() {
 
   ]);
 
+  var options = {
+    legend: {
+      position: 'none'
+    }
+  }
 
   var chart = new google.visualization.ColumnChart(document.getElementById("graph3"));
-  chart.draw(data);
+  chart.draw(data, options);
  }
 
 
