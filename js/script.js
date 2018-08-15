@@ -1,11 +1,26 @@
+
+
 // LINK TO JSON
 
+
+  var data = [];
   $.ajax({
     url: 'data/student.json',
     dataType: 'json',
     type: 'GET',
     success: function(results){
-      console.log(results);
+      for (var i = 0; i < results.length; i++) {
+        var student = {
+          age: results[i].age,
+          programme: results[i].programme,
+          ethnicity: results[i].ethnicity,
+          suburb: results[i].suburb,
+          food: results[i].food
+        }
+        data.push(student);
+        console.log(data);
+
+      }
     },
     error: function(error){
       console.log("ERROR");
@@ -43,7 +58,7 @@ google.charts.load('current', {'packages':['corechart']});
 
 
 
-// GEO CHART   SUBURBS STUDENTS ARE FROM
+// GEO CHART   FAV FOOD PALCES AROUND CAMPUS
 
 
 
@@ -53,10 +68,11 @@ google.charts.load('current', {'packages':['bar']});
      function drawChart() {
        var data = google.visualization.arrayToDataTable([
          ['Year', 'Sales', 'Expenses', 'Profit'],
-         ['2014', 1000, 400, 200],
-         ['2015', 1170, 460, 250],
-         ['2016', 660, 1120, 300],
-         ['2017', 1030, 540, 350]
+         ['McDonalds', ],
+         ['New World', ],
+         ['Subway', ],
+         ['Sushi B', ]
+
        ]);
 
        var options = {
@@ -73,14 +89,4 @@ google.charts.load('current', {'packages':['bar']});
 
 
 
-
-
-
-
-
-
-
-
-
-
-//END
+// END
