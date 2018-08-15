@@ -1,3 +1,5 @@
+// LINK TO JSON
+
   $.ajax({
     url: 'data/student.json',
     dataType: 'json',
@@ -12,41 +14,51 @@
   });
 
 
-// BAR CHART  COURSE / PRINTING COST
+// PIE CHART   COURSE / PRINTING COST
 
-google.charts.load('current', {packages: ['corechart']});
-google.charts.setOnLoadCallback(drawChart);
+google.charts.load('current', {'packages':['corechart']});
+     google.charts.setOnLoadCallback(drawChart);
 
-function drawChart(){
-  console.log('packages have been loaded');
+     function drawChart() {
 
-  const data = google.visualization.arrayToDataTable([
-      ['Web & Graphic','Web & UX','Graphic Design','Animation & Film'],
-      ['2013', 58719, 29568, 19237],
-      ['2014', 57243, 31062, 20125],
-      ['2015', 61038, 31608, 19947],
-      ['2016', 59430, 31176, 20235]
+       var data = google.visualization.arrayToDataTable([
+         ['Colours', 'Number of Students'],
+         ['Blue', 3],
+         ['Red', 3],
+         ['Pink', 1],
+         ['Purple', 1],
+         ['White', 1],
+         ['Orange', 1]
+       ]);
 
-  ])
+       var options = {
+         // title: 'Students Favourite Colours',
+         pieHole: 0.5
+       };
 
-  const options = {
-    title: 'Births, Deaths and Marrages from New Zealand',
-    subtitle: 'From 2013 to 2017',
-    hAxis: {
-      title: 'Number'
-    },
-    vAxis: {
-      title: 'Year'
-    },
-    legend: {
-      position: 'in'
-    }
+       var chart = new google.visualization.PieChart(document.getElementById('graph2'));
 
-  }
-
-  const chart = new google.visualization.BarChart(document.getElementById('chartContainer'));
-  chart.draw(data, options);
+       chart.draw(data, options);
+     }
 
 
 
-}
+// GEO CHART   SUBURBS STUDENTS ARE FROM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//END
