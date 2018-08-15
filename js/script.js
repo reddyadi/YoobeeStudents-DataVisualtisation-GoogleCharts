@@ -35,7 +35,40 @@
 
 
 
+// SCATTER CHART  DISTANCE FROM WHERE PEOPLE LIVE
+// GRAPH 1
+
+    function drawChart() {
+          var data1 = google.visualization.arrayToDataTable([
+            ['Student', 'Distance to Campus'],
+            [ data[0].id, data[0].distance],
+            [ data[1].id, data[1].distance],
+            [ data[2].id, data[2].distance],
+            [ data[3].id, data[3].distance],
+            [ data[4].id, data[4].distance],
+            [ data[5].id, data[5].distance],
+            [ data[6].id, data[6].distance],
+            [ data[7].id, data[7].distance],
+            [ data[8].id, data[8].distance],
+            [ data[9].id, data[9].distance],
+            [ data[10].id, data[10].distance]
+          ]);
+
+          var options = {
+            title: 'Student vs. Distance to Campus',
+            hAxis: {title: 'Student', minValue: 0, maxValue: 11},
+            vAxis: {title: 'Distance (KM)', minValue: 0, maxValue: 100},
+            legend: 'none'
+          };
+
+          var chart = new google.visualization.ScatterChart(document.getElementById('graph1'));
+
+          chart.draw(data1, options);
+        }
+
+
 // PIE CHART   COURSE / PRINTING COST
+// GRAPH 2
 
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChartpie);
@@ -63,8 +96,8 @@
      };
 
 
-// COL   FAV FOOD PALCES AROUND CAMPUS
-
+// COLUMN CHART   FAV FOOD PALCES AROUND CAMPUS
+// GRAPH 3
 
 google.charts.load("current", {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChartbar);
@@ -78,50 +111,10 @@ function drawChartbar() {
 
   ]);
 
-  // var options = {
-  //   chart: {
-  //   }
-  // };
 
   var chart = new google.visualization.ColumnChart(document.getElementById("graph3"));
   chart.draw(data);
  }
-
-
-
-
-// SCATTER CHART  DISTANCE FROM WHERE PEOPLE LIVE
-
-
-  function drawChart() {
-        var data1 = google.visualization.arrayToDataTable([
-          ['Student', 'Distance to Campus'],
-          [ data[0].id, data[0].distance],
-          [ data[1].id, data[1].distance],
-          [ data[2].id, data[2].distance],
-          [ data[3].id, data[3].distance],
-          [ data[4].id, data[4].distance],
-          [ data[5].id, data[5].distance],
-          [ data[6].id, data[6].distance],
-          [ data[7].id, data[7].distance],
-          [ data[8].id, data[8].distance],
-          [ data[9].id, data[9].distance],
-          [ data[10].id, data[10].distance]
-        ]);
-
-        var options = {
-          title: 'Student vs. Distance to Campus',
-          hAxis: {title: 'Student', minValue: 0, maxValue: 11},
-          vAxis: {title: 'Distance (KM)', minValue: 0, maxValue: 100},
-          legend: 'none'
-        };
-
-        var chart = new google.visualization.ScatterChart(document.getElementById('graph1'));
-
-        chart.draw(data1, options);
-      }
-
-
 
 
 
