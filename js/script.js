@@ -31,10 +31,10 @@
 
 // PIE CHART   COURSE / PRINTING COST
 
-google.charts.load('current', {'packages':['corechart']});
-     google.charts.setOnLoadCallback(drawChart);
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChartpie);
 
-     function drawChart() {
+     function drawChartpie() {
 
        var data = google.visualization.arrayToDataTable([
          ['Colours', 'Number of Students'],
@@ -54,8 +54,7 @@ google.charts.load('current', {'packages':['corechart']});
        var chart = new google.visualization.PieChart(document.getElementById('graph2'));
 
        chart.draw(data, options);
-     }
-
+     };
 
 
 // GEO CHART   FAV FOOD PALCES AROUND CAMPUS
@@ -63,29 +62,27 @@ google.charts.load('current', {'packages':['corechart']});
 
 
 google.charts.load('current', {'packages':['bar']});
-     google.charts.setOnLoadCallback(drawChart);
+     google.charts.setOnLoadCallback(drawChartbar);
 
-     function drawChart() {
+     function drawChartbar() {
        var data = google.visualization.arrayToDataTable([
-         ['Year', 'Sales', 'Expenses', 'Profit'],
-         ['McDonalds', ],
-         ['New World', ],
-         ['Subway', ],
-         ['Sushi B', ]
+         ['Favourite PLace', 'Number of Students'],
+         ['McDonalds', 1],
+         ['New World', 2],
+         ['Subway', 3],
+         ['Sushi B', 4]
 
        ]);
 
        var options = {
          chart: {
-           title: 'Company Performance',
-           subtitle: 'Sales, Expenses, and Profit: 2014-2017',
          }
        };
 
        var chart = new google.charts.Bar(document.getElementById('graph3'));
 
        chart.draw(data, google.charts.Bar.convertOptions(options));
-     }
+     };
 
 
 
