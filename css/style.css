@@ -26,28 +26,36 @@
 #mainContainer .graphContainer #graph1 {
   height: 90%;
   width: 70%;
-  background-color: #65655E;
+  padding-left: 4em;
+  padding-top: 2.5em;
+  background-color: #9FE398;
   float: left;
 }
 
 #mainContainer .graphContainer #graph2 {
   height: 90%;
   width: 70%;
-  background-color: #65655E;
+  padding-left: 4em;
+  padding-top: 2.5em;
+  background-color: #EEC967;
   float: left;
 }
 
 #mainContainer .graphContainer #graph3 {
   height: 90%;
   width: 70%;
-  background-color: #65655E;
+  padding-left: 4em;
+  padding-top: 2.5em;
+  background-color: #67EEE4;
   float: left;
 }
 
 #mainContainer .graphContainer #graph4 {
   height: 90%;
   width: 70%;
-  background-color: #65655E;
+  padding-left: 4em;
+  padding-top: 2.5em;
+  background-color: #E7B2D9;
   float: left;
 }
 
@@ -58,6 +66,11 @@
   /* background-color: #B79492; */
   height: 70%;
   width: 20%;
+}
+
+p{
+  border: 5px solid #8F8F8F;
+  border-radius: 1em;
 }
 
 /* end */

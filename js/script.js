@@ -51,7 +51,9 @@
             var options = {
               hAxis: {title: 'Student', minValue: 0, maxValue: 11},
               vAxis: {title: 'Distance (KM)', minValue: 0, maxValue: 100},
-              legend: 'none'
+              legend: 'none',
+              width: 800,
+              height: 400
             };
 
             var chart = new google.visualization.ScatterChart(document.getElementById('graph1'));
@@ -83,7 +85,9 @@
            pieHole: 0.5,
            legend: {
              position: 'none'
-           }
+           },
+           width: 800,
+           height: 400
          };
 
          var chart = new google.visualization.PieChart(document.getElementById('graph2'));
@@ -112,6 +116,8 @@
         position: 'none'
       },
       vAxis: {title: 'Students'},
+      width: 800,
+      height: 400
     };
 
     var chart = new google.visualization.ColumnChart(document.getElementById("graph3"));
@@ -140,7 +146,9 @@
         title: 'Correlation Between students and their preferences in various catergories',
         hAxis: {title: 'Age'},
         vAxis: {title: 'ID'},
-        bubble: {textStyle: {fontSize: 14}}
+        bubble: {textStyle: {fontSize: 14}},
+        width: 800,
+        height: 400
       };
 
       var chart = new google.visualization.BubbleChart(document.getElementById('graph4'));
