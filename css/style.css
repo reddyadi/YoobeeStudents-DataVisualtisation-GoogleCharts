@@ -31,7 +31,7 @@
   width: 50%;
   padding-left: 4em;
   padding-top: 2.5em;
-  background-color: #9FE398;
+  background-color: #E9EB87;
   float: left;
 }
 
@@ -40,7 +40,7 @@
   width: 50%;
   padding-left: 4em;
   padding-top: 2.5em;
-  background-color: #EEC967;
+  background-color: #9FE398;
 
   float: left;
 }
@@ -64,22 +64,56 @@
   float: left;
 }
 
+#mainContainer .graphContainer .filter {
+  width: 30%;
+  height: 90%;
+  padding: 2em;
+  background-color: #5BBA6F;
+}
+
+#mainContainer .graphContainer #filter1 {
+  background-color: #5BBA6F;
+}
+
+#mainContainer .graphContainer #filter2 {
+  background-color: #5BBA6F;
+}
+
+#mainContainer .graphContainer #filter3 {
+  background-color: #BDFFFD;
+}
+
+#mainContainer .graphContainer #filter4 {
+  background-color: #B48EAE;
+}
+
+
+
 #mainContainer .graphContainer .textContainer {
   float: left;
   /* margin-left: 5%; */
   /* margin-top: 3%; */
-  background-color: red;
+  background-color: #3FA34D;
   height: 90%;
   width: 23%;
 }
 
-#mainContainer .graphContainer .filter {
-  width: 30%;
-  height: 90%;
-  /* margin-top: 3.4em; */
-  background-color: grey;
+
+#mainContainer .graphContainer #textC1{
+  background-color: #3FA34D;
 }
 
+#mainContainer .graphContainer #textC2{
+  background-color: #3FA34D;
+}
+
+#mainContainer .graphContainer #textC3{
+  background-color: #9FFFF5;
+}
+
+#mainContainer .graphContainer #textC4{
+  background-color: #A1869E;
+}
 
 p{
   padding: 0.25em;
@@ -87,11 +121,17 @@ p{
   border-radius: 1em;
 }
 
-.test{
-  height: 5em;
-  width: 5em;
-  border: 1px solid black;
-  float: right;
+#display1, #display2, #display3, #display4{
+  padding-left: 4.5em;
 }
+
+#display-filter1, #display-filter2, #display-filter3, #display-filter4{
+  margin-top: 2em;
+  padding: 0.5em;
+  border: 2px solid black;
+  border-radius: 0.5em;
+}
+
+
 
 /* end */
