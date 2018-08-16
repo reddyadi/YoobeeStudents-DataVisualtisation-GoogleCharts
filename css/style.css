@@ -1,6 +1,7 @@
 #headerContainer {
   text-align: center;
   margin-top: 2%;
+  /* float: left; */
 }
 
 #mainContainer {
@@ -55,7 +56,7 @@
   float: left;
   margin-left: 5%;
   margin-top: 3%;
-  /* background-color: #B79492; */
+  background-color: #B79492;
   height: 70%;
   width: 20%;
 }
