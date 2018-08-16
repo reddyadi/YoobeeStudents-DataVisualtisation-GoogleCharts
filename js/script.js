@@ -29,8 +29,6 @@
     }
   });
 
-
-
   // SCATTER CHART  DISTANCE FROM WHERE PEOPLE LIVE
   // GRAPH 1
 
@@ -118,30 +116,30 @@
 
     var chart = new google.visualization.ColumnChart(document.getElementById("graph3"));
     chart.draw(data, options);
-   }
+  }
 
 //BubbleChart showing student diversity
   function drawSeriesChart() {
 
       var data1 = google.visualization.arrayToDataTable([
         ['Food',            'Age',          'ID',         'Suburb',           'Distance'],
-        [data[0].food,    data[0].age,   data[0].id,   data[0].suburb,  data[0].distance],
-        [data[1].food,    data[1].age,   data[1].id,   data[1].suburb,  data[1].distance],
-        [data[2].food,    data[2].age,   data[2].id,   data[2].suburb,  data[2].distance],
-        [data[3].food,    data[3].age,   data[3].id,   data[3].suburb,  data[3].distance],
-        [data[4].food,    data[4].age,    data[4].id,   data[4].suburb,  data[4].distance],
-        [data[5].food,    data[5].age,   data[5].id,   data[5].suburb,  data[5].distance],
-        [data[6].food,    data[6].age,   data[6].id,   data[6].suburb,  data[6].distance],
-        [data[7].food,    data[7].age,   data[7].id,   data[7].suburb,  data[7].distance],
-        [data[8].food,    data[8].age,   data[8].id,   data[8].suburb,  data[8].distance],
-        [data[9].food,    data[9].age,   data[9].id,   data[9].suburb,  data[9].distance],
-        [data[10].food,   data[10].age,  data[10].id,  data[10].suburb, data[10].distance]
+        [data[0].animal,    data[0].age,   data[0].id,   data[0].suburb,  data[0].distance],
+        [data[1].animal,    data[1].age,   data[1].id,   data[1].suburb,  data[1].distance],
+        [data[2].animal,    data[2].age,   data[2].id,   data[2].suburb,  data[2].distance],
+        [data[3].animal,    data[3].age,   data[3].id,   data[3].suburb,  data[3].distance],
+        [data[4].animal,    data[4].age,    data[4].id,   data[4].suburb,  data[4].distance],
+        [data[5].animal,    data[5].age,   data[5].id,   data[5].suburb,  data[5].distance],
+        [data[6].animal,    data[6].age,   data[6].id,   data[6].suburb,  data[6].distance],
+        [data[7].animal,    data[7].age,   data[7].id,   data[7].suburb,  data[7].distance],
+        [data[8].animal,    data[8].age,   data[8].id,   data[8].suburb,  data[8].distance],
+        [data[9].animal,    data[9].age,   data[9].id,   data[9].suburb,  data[9].distance],
+        [data[10].animal,   data[10].age,  data[10].id,  data[10].suburb, data[10].distance]
       ]);
 
       var options = {
         title: 'Correlation Between students and their preferences in various catergories',
-        hAxis: {title: 'ID'},
-        vAxis: {title: 'Age'},
+        hAxis: {title: 'Age'},
+        vAxis: {title: 'ID'},
         bubble: {textStyle: {fontSize: 14}}
       };
 
