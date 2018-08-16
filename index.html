@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <meta charset="utf-8">
     <title>Yoobee Students</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
   </head>
   <body>
 
@@ -20,6 +20,7 @@
     <div id="mainContainer">
         <div class="graphContainer mainContainer1">
           <div class"graph" id="graph1"></div>
+          <div class="filter" id="filter1"></div>
           <div class="textContainer">
             <h4><u>Distance Students Travel to get to Yoobee</u></h4>
             <br>
@@ -29,24 +30,28 @@
         </div>
         <div class="graphContainer graph-border">
           <div class"graph" id="graph2"></div>
+          <div class="filter" id="filter2"></div>
           <div class="textContainer">
             <h4><u>Students Favourite Colours</u></h4>
             <br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>This pie chart depicts the favourite colours of students in Yoobee.
+              This data mainly shows a majority split between red and blue with a  some outliers are other colours
+            </p>
           </div>
         </div>
         <div class="graphContainer graph-border">
           <div class"graph" id="graph3"></div>
+          <div class="filter" id="filter3"></div>
           <div class="textContainer">
             <h4><u>Favourite Food Place</u></h4>
             <br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-               do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>This bar chart shows the favourite food places around campus for Yoobee students. This data shows the personal favourites of each students favorite meal to get if they are in campus.
+               With a majority choosing Mcdonalds then each place after that slowly decreasing in popularity.</p>
           </div>
         </div>
         <div class="graphContainer graph-border">
           <div class"graph" id="graph4"></div>
+          <div class="filter" id="filter4"></div>
           <div class="textContainer">
             <h4><u>Student Authenticity on Various Catergories</u></h4>
             <p>This Bubble Chart represents the various differences amoung students at Yoobee. With a centralised age range between 17 to 25.
@@ -63,6 +68,7 @@
   <script type="text/javascript" src= "js/script.js"></script>
   <script type="text/javascript">
     google.charts.load('current', {'packages':['corechart']});
+    google.charts.load('current', {'packages':['corechart', 'controls']});
     google.charts.load('current', {'packages':['bar']});
     google.charts.setOnLoadCallback(drawChart);
     google.charts.setOnLoadCallback(drawChartpie);

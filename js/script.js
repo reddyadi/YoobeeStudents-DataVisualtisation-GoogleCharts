@@ -32,34 +32,62 @@
   // SCATTER CHART  DISTANCE FROM WHERE PEOPLE LIVE
   // GRAPH 1
 
-  function drawChart() {
-        var data1 = google.visualization.arrayToDataTable([
-          ['Student', 'Distance to Campus'],
-          [ data[0].id, data[0].distance],
-          [ data[1].id, data[1].distance],
-          [ data[2].id, data[2].distance],
-          [ data[3].id, data[3].distance],
-          [ data[4].id, data[4].distance],
-          [ data[5].id, data[5].distance],
-          [ data[6].id, data[6].distance],
-          [ data[7].id, data[7].distance],
-          [ data[8].id, data[8].distance],
-          [ data[9].id, data[9].distance],
-          [ data[10].id, data[10].distance]
-        ]);
+      function drawChart() {
+            var data1 = google.visualization.arrayToDataTable([
+              ['Student', 'Distance to Campus'],
+              [ data[0].id, data[0].distance],
+              [ data[1].id, data[1].distance],
+              [ data[2].id, data[2].distance],
+              [ data[3].id, data[3].distance],
+              [ data[4].id, data[4].distance],
+              [ data[5].id, data[5].distance],
+              [ data[6].id, data[6].distance],
+              [ data[7].id, data[7].distance],
+              [ data[8].id, data[8].distance],
+              [ data[9].id, data[9].distance],
+              [ data[10].id, data[10].distance]
+            ]);
 
-        var options = {
-          hAxis: {title: 'Student', minValue: 0, maxValue: 11},
-          vAxis: {title: 'Distance (km)', minValue: 0, maxValue: 100},
-          legend: 'none',
-          width: 800,
-          height: 400
-        };
+            var options = {
+              hAxis: {title: 'Student', minValue: 0, maxValue: 11},
+              vAxis: {title: 'Distance (km)', minValue: 0, maxValue: 100},
+              legend: 'none',
+              width: 600,
+              height: 400
+            };
 
-        var chart = new google.visualization.ScatterChart(document.getElementById('graph1'));
+            var chart = new google.visualization.ScatterChart(document.getElementById('graph1'));
 
-        chart.draw(data1, options);
+            chart.draw(data1, options);
 
+            //Create a range slider, passing some options
+            var dashboard = new google.visualization.Dashboard(
+              document.getElementById(''));
+
+            // Create a range slider, passing some options
+            var donutRangeSlider = new google.visualization.ControlWrapper({
+              'controlType': 'NumberRangeFilter',
+              'containerId': 'filter_div',
+              'options': {
+                'filterColumnLabel': 'Attacks'
+              }
+            });
+
+            var barChart = new google.visualization.ChartWrapper({
+              'chartType': 'BarChart',
+              'containerId': 'chart_div2',
+              'options': {
+                'width': 300,
+                'height': 300,
+                'pieSliceText': 'value',
+                'legend': 'right'
+              }
+            });
+
+            dashboard.bind(donutRangeSlider, barChart);
+
+            dashboard.draw(data1);
+            
         //Create a range slider, passing some options
         var dashboard = new google.visualization.Dashboard(
           document.getElementById(''));
@@ -92,30 +120,30 @@
   // PIE CHART   COURSE / PRINTING COST
   // GRAPH 2
 
-  function drawChartpie() {
-   var data = google.visualization.arrayToDataTable([
-     ['Colours', 'Number of Students'],
-     ['Blue', 3],
-     ['Red', 3],
-     ['Pink', 1],
-     ['Purple', 1],
-     ['White', 1],
-     ['Orange', 1]
-   ]);
+function drawChartpie() {
+ var data = google.visualization.arrayToDataTable([
+   ['Colours', 'Number of Students'],
+   ['Blue', 3],
+   ['Red', 3],
+   ['Pink', 1],
+   ['Purple', 1],
+   ['White', 1],
+   ['Orange', 1]
+ ]);
 
-   var options = {
-     // title: 'Students Favourite Colours',
-     pieHole: 0.5,
-     legend: {
-       position: 'none'
-     },
-     width: 800,
-     height: 400
-   };
+ var options = {
+   // title: 'Students Favourite Colours',
+   pieHole: 0.5,
+   legend: {
+     position: 'none'
+   },
+   width: 600,
+   height: 400
+ };
 
-   var chart = new google.visualization.PieChart(document.getElementById('graph2'));
+ var chart = new google.visualization.PieChart(document.getElementById('graph2'));
 
-   chart.draw(data, options);
+ chart.draw(data, options);
 
    //Create a range slider, passing some options
    var dashboard = new google.visualization.Dashboard(
@@ -164,7 +192,7 @@
         position: 'none'
       },
       vAxis: {title: 'Students'},
-      width: 800,
+      width: 600,
       height: 400
     };
 
@@ -222,7 +250,7 @@
         hAxis: {title: 'Age'},
         vAxis: {title: 'ID'},
         bubble: {textStyle: {fontSize: 14}},
-        width: 800,
+        width: 600,
         height: 400
       };
 
