@@ -32,92 +32,119 @@
   // SCATTER CHART  DISTANCE FROM WHERE PEOPLE LIVE
   // GRAPH 1
 
-      function drawChart() {
-            var data1 = google.visualization.arrayToDataTable([
-              ['Student', 'Distance to Campus'],
-              [ data[0].id, data[0].distance],
-              [ data[1].id, data[1].distance],
-              [ data[2].id, data[2].distance],
-              [ data[3].id, data[3].distance],
-              [ data[4].id, data[4].distance],
-              [ data[5].id, data[5].distance],
-              [ data[6].id, data[6].distance],
-              [ data[7].id, data[7].distance],
-              [ data[8].id, data[8].distance],
-              [ data[9].id, data[9].distance],
-              [ data[10].id, data[10].distance]
-            ]);
+  function drawChart() {
+        var data1 = google.visualization.arrayToDataTable([
+          ['Student', 'Distance to Campus'],
+          [ data[0].id, data[0].distance],
+          [ data[1].id, data[1].distance],
+          [ data[2].id, data[2].distance],
+          [ data[3].id, data[3].distance],
+          [ data[4].id, data[4].distance],
+          [ data[5].id, data[5].distance],
+          [ data[6].id, data[6].distance],
+          [ data[7].id, data[7].distance],
+          [ data[8].id, data[8].distance],
+          [ data[9].id, data[9].distance],
+          [ data[10].id, data[10].distance]
+        ]);
 
-            var options = {
-              hAxis: {title: 'Student', minValue: 0, maxValue: 11},
-              vAxis: {title: 'Distance (km)', minValue: 0, maxValue: 100},
-              legend: 'none',
-              width: 800,
-              height: 400
-            };
+        var options = {
+          hAxis: {title: 'Student', minValue: 0, maxValue: 11},
+          vAxis: {title: 'Distance (km)', minValue: 0, maxValue: 100},
+          legend: 'none',
+          width: 800,
+          height: 400
+        };
 
-            var chart = new google.visualization.ScatterChart(document.getElementById('graph1'));
+        var chart = new google.visualization.ScatterChart(document.getElementById('graph1'));
 
-            chart.draw(data1, options);
+        chart.draw(data1, options);
 
-            //Create a range slider, passing some options
-            var dashboard = new google.visualization.Dashboard(
-              document.getElementById(''));
+        //Create a range slider, passing some options
+        var dashboard = new google.visualization.Dashboard(
+          document.getElementById(''));
 
-            // Create a range slider, passing some options
-            var donutRangeSlider = new google.visualization.ControlWrapper({
-              'controlType': 'NumberRangeFilter',
-              'containerId': 'filter_div',
-              'options': {
-                'filterColumnLabel': 'Attacks'
-              }
-            });
+        // Create a range slider, passing some options
+        var donutRangeSlider = new google.visualization.ControlWrapper({
+          'controlType': 'NumberRangeFilter',
+          'containerId': 'filter_div',
+          'options': {
+            'filterColumnLabel': 'Distance to Campus'
+          }
+        });
 
-            var barChart = new google.visualization.ChartWrapper({
-              'chartType': 'BarChart',
-              'containerId': 'chart_div2',
-              'options': {
-                'width': 300,
-                'height': 300,
-                'pieSliceText': 'value',
-                'legend': 'right'
-              }
-            });
+        var barChart = new google.visualization.ChartWrapper({
+          'chartType': 'BarChart',
+          'containerId': 'chart_div2',
+          'options': {
+            'width': 300,
+            'height': 300,
+            'pieSliceText': 'value',
+            'legend': 'right'
+          }
+        });
 
-            dashboard.bind(donutRangeSlider, barChart);
+        dashboard.bind(donutRangeSlider, barChart);
 
-            dashboard.draw(data1);
-      }
-
+        dashboard.draw(data1);
+  }
 
   // PIE CHART   COURSE / PRINTING COST
   // GRAPH 2
 
-      function drawChartpie() {
-       var data = google.visualization.arrayToDataTable([
-         ['Colours', 'Number of Students'],
-         ['Blue', 3],
-         ['Red', 3],
-         ['Pink', 1],
-         ['Purple', 1],
-         ['White', 1],
-         ['Orange', 1]
-       ]);
+  function drawChartpie() {
+   var data = google.visualization.arrayToDataTable([
+     ['Colours', 'Number of Students'],
+     ['Blue', 3],
+     ['Red', 3],
+     ['Pink', 1],
+     ['Purple', 1],
+     ['White', 1],
+     ['Orange', 1]
+   ]);
 
-       var options = {
-         // title: 'Students Favourite Colours',
-         pieHole: 0.5,
-         legend: {
-           position: 'none'
-         },
-         width: 800,
-         height: 400
-       };
+   var options = {
+     // title: 'Students Favourite Colours',
+     pieHole: 0.5,
+     legend: {
+       position: 'none'
+     },
+     width: 800,
+     height: 400
+   };
 
-       var chart = new google.visualization.PieChart(document.getElementById('graph2'));
+   var chart = new google.visualization.PieChart(document.getElementById('graph2'));
 
-       chart.draw(data, options);
+   chart.draw(data, options);
+
+   //Create a range slider, passing some options
+   var dashboard = new google.visualization.Dashboard(
+     document.getElementById(''));
+
+   // Create a range slider, passing some options
+   var donutRangeSlider = new google.visualization.ControlWrapper({
+     'controlType': 'CategoryFilter',
+     'containerId': 'filter_div',
+     'options': {
+       'filterColumnLabel': 'Colours'
      }
+   });
+
+   var pieChart = new google.visualization.ChartWrapper({
+     'chartType': 'PieChart',
+     'containerId': 'chart_div2',
+     'options': {
+       'width': 300,
+       'height': 300,
+       'pieSliceText': 'value',
+       'legend': 'right'
+     }
+   });
+
+   dashboard.bind(donutRangeSlider, pieChart);
+
+   dashboard.draw(data);
+  }
 
 
   // COLUMN CHART   FAV FOOD PALCES AROUND CAMPUS
@@ -125,7 +152,7 @@
 
   function drawChartbar() {
     var data = google.visualization.arrayToDataTable([
-      ['Favourite PLace', 'Number of Students'],
+      ['Favourite Place', 'Number of Students'],
       ['McDonalds', 5],
       ['Subway', 3],
       ['Sushi B', 1],
@@ -143,12 +170,40 @@
 
     var chart = new google.visualization.ColumnChart(document.getElementById("graph3"));
     chart.draw(data, options);
+
+    //Create a range slider, passing some options
+    var dashboard = new google.visualization.Dashboard(
+      document.getElementById(''));
+
+    // Create a range slider, passing some options
+    var donutRangeSlider = new google.visualization.ControlWrapper({
+      'controlType': 'CategoryFilter',
+      'containerId': 'filter_div',
+      'options': {
+        'filterColumnLabel': 'Favourite Place'
+      }
+    });
+
+    var pieChart = new google.visualization.ChartWrapper({
+      'chartType': 'PieChart',
+      'containerId': 'chart_div2',
+      'options': {
+        'width': 300,
+        'height': 300,
+        'pieSliceText': 'value',
+        'legend': 'right'
+      }
+    });
+
+    dashboard.bind(donutRangeSlider, pieChart);
+
+    dashboard.draw(data);
   }
 
 //BubbleChart showing student diversity
   function drawSeriesChart() {
       var data1 = google.visualization.arrayToDataTable([
-        ['Food',            'Age',          'ID',         'Suburb',           'Distance'],
+        ['Animal',            'Age',          'ID',         'Suburb',           'Distance'],
         [data[0].animal,    data[0].age,   data[0].id,   data[0].suburb,  data[0].distance],
         [data[1].animal,    data[1].age,   data[1].id,   data[1].suburb,  data[1].distance],
         [data[2].animal,    data[2].age,   data[2].id,   data[2].suburb,  data[2].distance],
@@ -173,6 +228,34 @@
 
       var chart = new google.visualization.BubbleChart(document.getElementById('graph4'));
       chart.draw(data1, options);
-    }
+
+      //Create a range slider, passing some options
+      var dashboard = new google.visualization.Dashboard(
+        document.getElementById(''));
+
+      // Create a range slider, passing some options
+      var donutRangeSlider = new google.visualization.ControlWrapper({
+        'controlType': 'CategoryFilter',
+        'containerId': 'filter_div',
+        'options': {
+          'filterColumnLabel': 'Age'
+        }
+      });
+
+      var barChart = new google.visualization.ChartWrapper({
+        'chartType': 'BarChart',
+        'containerId': 'chart_div2',
+        'options': {
+          'width': 300,
+          'height': 300,
+          'pieSliceText': 'value',
+          'legend': 'right'
+        }
+      });
+
+      dashboard.bind(donutRangeSlider, barChart);
+
+      dashboard.draw(data1);
+  }
 
 // END
