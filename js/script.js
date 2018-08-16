@@ -59,48 +59,42 @@
             var chart = new google.visualization.ScatterChart(document.getElementById('graph1'));
 
             chart.draw(data1, options);
-          }
+      }
 
 
   // PIE CHART   COURSE / PRINTING COST
   // GRAPH 2
 
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChartpie);
+      function drawChartpie() {
+       var data = google.visualization.arrayToDataTable([
+         ['Colours', 'Number of Students'],
+         ['Blue', 3],
+         ['Red', 3],
+         ['Pink', 1],
+         ['Purple', 1],
+         ['White', 1],
+         ['Orange', 1]
+       ]);
 
-       function drawChartpie() {
+       var options = {
+         // title: 'Students Favourite Colours',
+         pieHole: 0.5,
+         legend: {
+           position: 'none'
+         },
+         width: 800,
+         height: 400
+       };
 
-         var data = google.visualization.arrayToDataTable([
-           ['Colours', 'Number of Students'],
-           ['Blue', 3],
-           ['Red', 3],
-           ['Pink', 1],
-           ['Purple', 1],
-           ['White', 1],
-           ['Orange', 1]
-         ]);
+       var chart = new google.visualization.PieChart(document.getElementById('graph2'));
 
-         var options = {
-           // title: 'Students Favourite Colours',
-           pieHole: 0.5,
-           legend: {
-             position: 'none'
-           },
-           width: 800,
-           height: 400
-         };
-
-         var chart = new google.visualization.PieChart(document.getElementById('graph2'));
-
-         chart.draw(data, options);
-       }
+       chart.draw(data, options);
+     }
 
 
   // COLUMN CHART   FAV FOOD PALCES AROUND CAMPUS
   // GRAPH 3
 
-  google.charts.load("current", {'packages':['corechart']});
-  google.charts.setOnLoadCallback(drawChartbar);
   function drawChartbar() {
     var data = google.visualization.arrayToDataTable([
       ['Favourite PLace', 'Number of Students'],
@@ -108,7 +102,6 @@
       ['Subway', 3],
       ['Sushi B', 1],
       ['New World', 1]
-
     ]);
 
     var options = {
@@ -126,7 +119,6 @@
 
 //BubbleChart showing student diversity
   function drawSeriesChart() {
-
       var data1 = google.visualization.arrayToDataTable([
         ['Food',            'Age',          'ID',         'Suburb',           'Distance'],
         [data[0].animal,    data[0].age,   data[0].id,   data[0].suburb,  data[0].distance],
