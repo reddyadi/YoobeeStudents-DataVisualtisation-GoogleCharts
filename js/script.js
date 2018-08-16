@@ -18,7 +18,7 @@
           printing_credit: results[i].printingCredit,
           printing_topup: results[i].printingCreditTopUp,
           distance: results[i].distanceToCampus
-        }
+        };
         data.push(student);
       }
         console.log(data);
@@ -89,7 +89,7 @@
          var chart = new google.visualization.PieChart(document.getElementById('graph2'));
 
          chart.draw(data, options);
-       };
+       }
 
 
   // COLUMN CHART   FAV FOOD PALCES AROUND CAMPUS
@@ -112,7 +112,7 @@
         position: 'none'
       },
       vAxis: {title: 'Students'},
-    }
+    };
 
     var chart = new google.visualization.ColumnChart(document.getElementById("graph3"));
     chart.draw(data, options);
