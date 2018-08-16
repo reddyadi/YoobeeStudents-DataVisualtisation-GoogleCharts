@@ -50,15 +50,43 @@
 
             var options = {
               hAxis: {title: 'Student', minValue: 0, maxValue: 11},
-              vAxis: {title: 'Distance (KM)', minValue: 0, maxValue: 100},
+              vAxis: {title: 'Distance (km)', minValue: 0, maxValue: 100},
               legend: 'none',
-              width: 800,
+              width: 600,
               height: 400
             };
 
             var chart = new google.visualization.ScatterChart(document.getElementById('graph1'));
 
             chart.draw(data1, options);
+
+            //Create a range slider, passing some options
+            var dashboard = new google.visualization.Dashboard(
+              document.getElementById(''));
+
+            // Create a range slider, passing some options
+            var donutRangeSlider = new google.visualization.ControlWrapper({
+              'controlType': 'NumberRangeFilter',
+              'containerId': 'filter_div',
+              'options': {
+                'filterColumnLabel': 'Attacks'
+              }
+            });
+
+            var barChart = new google.visualization.ChartWrapper({
+              'chartType': 'BarChart',
+              'containerId': 'chart_div2',
+              'options': {
+                'width': 300,
+                'height': 300,
+                'pieSliceText': 'value',
+                'legend': 'right'
+              }
+            });
+
+            dashboard.bind(donutRangeSlider, barChart);
+
+            dashboard.draw(data1);
       }
 
 
@@ -82,7 +110,7 @@
          legend: {
            position: 'none'
          },
-         width: 800,
+         width: 600,
          height: 400
        };
 
@@ -109,7 +137,7 @@
         position: 'none'
       },
       vAxis: {title: 'Students'},
-      width: 800,
+      width: 600,
       height: 400
     };
 
@@ -139,7 +167,7 @@
         hAxis: {title: 'Age'},
         vAxis: {title: 'ID'},
         bubble: {textStyle: {fontSize: 14}},
-        width: 800,
+        width: 600,
         height: 400
       };
 
