@@ -52,7 +52,7 @@
               hAxis: {title: 'Student', minValue: 0, maxValue: 11},
               vAxis: {title: 'Distance (km)', minValue: 0, maxValue: 100},
               legend: 'none',
-              width: 800,
+              width: 600,
               height: 400,
               backgroundColor: '#E9EB87'
             };
@@ -81,7 +81,8 @@
                 'width': 300,
                 'height': 300,
                 'pieSliceText': 'value',
-                'legend': 'right'
+                'legend': 'right',
+                'backgroundColor': '#F3F4C0'
               }
             });
 
@@ -112,7 +113,8 @@ function drawChartpie() {
      position: 'none'
    },
    width: 600,
-   height: 400
+   height: 400,
+   backgroundColor: '#9FE398'
  };
 
  var chart = new google.visualization.PieChart(document.getElementById('graph2'));
@@ -139,7 +141,8 @@ function drawChartpie() {
        'width': 300,
        'height': 300,
        'pieSliceText': 'value',
-       'legend': 'right'
+       'legend': 'right',
+       'backgroundColor': '#5BBA6F'
      }
    });
 
@@ -167,7 +170,8 @@ function drawChartpie() {
       },
       vAxis: {title: 'Students'},
       width: 600,
-      height: 400
+      height: 400,
+      backgroundColor: '#67EEE4'
     };
 
     var chart = new google.visualization.ColumnChart(document.getElementById("graph3"));
@@ -193,7 +197,8 @@ function drawChartpie() {
         'width': 300,
         'height': 300,
         'pieSliceText': 'value',
-        'legend': 'right'
+        'legend': 'right',
+        'backgroundColor': '#BDFFFD'
       }
     });
 
@@ -225,7 +230,8 @@ function drawChartpie() {
         vAxis: {title: 'ID'},
         bubble: {textStyle: {fontSize: 14}},
         width: 600,
-        height: 400
+        height: 400,
+        backgroundColor: '#E7B2D9'
       };
 
       var chart = new google.visualization.BubbleChart(document.getElementById('graph4'));
@@ -251,7 +257,8 @@ function drawChartpie() {
           'width': 300,
           'height': 300,
           'pieSliceText': 'value',
-          'legend': 'right'
+          'legend': 'right',
+          'backgroundColor': '#B48EAE'
         }
       });
 

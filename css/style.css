@@ -1,7 +1,20 @@
+*{
+
+}
+
+body {
+  background-color: #D0D0D0 !important;
+}
+
 #headerContainer {
-  text-align: center;
+  text-align: right;
   margin-top: 2%;
   /* float: left; */
+}
+
+h1{
+  font-size: 5em !important;
+  font-family: 'Amatic SC', cursive !important;
 }
 
 #mainContainer {
@@ -72,7 +85,7 @@
 }
 
 #mainContainer .graphContainer #filter1 {
-  background-color: #5BBA6F;
+  background-color: #F3F4C0;
 }
 
 #mainContainer .graphContainer #filter2 {
@@ -91,16 +104,17 @@
 
 #mainContainer .graphContainer .textContainer {
   float: left;
+  padding: 1em;
   /* margin-left: 5%; */
   /* margin-top: 3%; */
-  background-color: #3FA34D;
+  /* background-color: #3FA34D; */
   height: 90%;
   width: 23%;
 }
 
 
 #mainContainer .graphContainer #textC1{
-  background-color: #3FA34D;
+  background-color: #F0F1AE;
 }
 
 #mainContainer .graphContainer #textC2{
@@ -131,7 +145,6 @@ p{
   border: 2px solid black;
   border-radius: 0.5em;
 }
-
 
 
 /* end */
