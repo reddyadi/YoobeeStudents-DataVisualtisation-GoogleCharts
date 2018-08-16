@@ -52,7 +52,7 @@
               hAxis: {title: 'Student', minValue: 0, maxValue: 11},
               vAxis: {title: 'Distance (km)', minValue: 0, maxValue: 100},
               legend: 'none',
-              width: 800,
+              width: 600,
               height: 400
             };
 
@@ -110,7 +110,7 @@
          legend: {
            position: 'none'
          },
-         width: 800,
+         width: 600,
          height: 400
        };
 
@@ -137,7 +137,7 @@
         position: 'none'
       },
       vAxis: {title: 'Students'},
-      width: 800,
+      width: 600,
       height: 400
     };
 
@@ -167,7 +167,7 @@
         hAxis: {title: 'Age'},
         vAxis: {title: 'ID'},
         bubble: {textStyle: {fontSize: 14}},
-        width: 800,
+        width: 600,
         height: 400
       };
 
