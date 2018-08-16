@@ -50,7 +50,7 @@
 
             var options = {
               hAxis: {title: 'Student', minValue: 0, maxValue: 11},
-              vAxis: {title: 'Distance (KM)', minValue: 0, maxValue: 100},
+              vAxis: {title: 'Distance (km)', minValue: 0, maxValue: 100},
               legend: 'none',
               width: 800,
               height: 400
@@ -59,6 +59,34 @@
             var chart = new google.visualization.ScatterChart(document.getElementById('graph1'));
 
             chart.draw(data1, options);
+
+            //Create a range slider, passing some options
+            var dashboard = new google.visualization.Dashboard(
+              document.getElementById(''));
+
+            // Create a range slider, passing some options
+            var donutRangeSlider = new google.visualization.ControlWrapper({
+              'controlType': 'NumberRangeFilter',
+              'containerId': 'filter_div',
+              'options': {
+                'filterColumnLabel': 'Attacks'
+              }
+            });
+
+            var barChart = new google.visualization.ChartWrapper({
+              'chartType': 'BarChart',
+              'containerId': 'chart_div2',
+              'options': {
+                'width': 300,
+                'height': 300,
+                'pieSliceText': 'value',
+                'legend': 'right'
+              }
+            });
+
+            dashboard.bind(donutRangeSlider, barChart);
+
+            dashboard.draw(data1);
       }
 
 

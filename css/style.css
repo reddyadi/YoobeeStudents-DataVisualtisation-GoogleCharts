@@ -74,4 +74,12 @@ p{
   border-radius: 1em;
 }
 
+.test{
+  height: 5em;
+  width: 5em;
+  border: 1px solid black;
+  float: right;
+}
+
+
 /* end */
