@@ -1,5 +1,6 @@
-*{
-
+h1{
+  font-size: 5em !important;
+  font-family: 'Amatic SC', cursive !important;
 }
 
 body {
@@ -10,11 +11,6 @@ body {
   text-align: right;
   margin-top: 2%;
   /* float: left; */
-}
-
-h1{
-  font-size: 5em !important;
-  font-family: 'Amatic SC', cursive !important;
 }
 
 #mainContainer {
@@ -46,6 +42,8 @@ h1{
   padding-top: 2.5em;
   background-color: #E9EB87;
   float: left;
+  margin: 0.5em;
+  border-radius: 1em;
 }
 
 #mainContainer .graphContainer #graph2 {
@@ -54,8 +52,9 @@ h1{
   padding-left: 4em;
   padding-top: 2.5em;
   background-color: #9FE398;
-
   float: left;
+  margin: 0.5em;
+  border-radius: 1em;
 }
 
 #mainContainer .graphContainer #graph3 {
@@ -65,7 +64,8 @@ h1{
   padding-top: 2.5em;
   background-color: #67EEE4;
   float: left;
-
+  margin: 0.5em;
+  border-radius: 1em;
 }
 
 #mainContainer .graphContainer #graph4 {
@@ -75,6 +75,8 @@ h1{
   padding-top: 2.5em;
   background-color: #E7B2D9;
   float: left;
+  margin: 0.5em;
+  border-radius: 1em;
 }
 
 #mainContainer .graphContainer .filter {
@@ -86,18 +88,26 @@ h1{
 
 #mainContainer .graphContainer #filter1 {
   background-color: #F3F4C0;
+  margin: 0.5em;
+  border-radius: 1em;
 }
 
 #mainContainer .graphContainer #filter2 {
   background-color: #5BBA6F;
+  margin: 0.5em;
+  border-radius: 1em;
 }
 
 #mainContainer .graphContainer #filter3 {
   background-color: #BDFFFD;
+  margin: 0.5em;
+  border-radius: 1em;
 }
 
 #mainContainer .graphContainer #filter4 {
   background-color: #B48EAE;
+  margin: 0.5em;
+  border-radius: 1em;
 }
 
 
@@ -115,24 +125,37 @@ h1{
 
 #mainContainer .graphContainer #textC1{
   background-color: #F0F1AE;
+  margin: 0.5em;
+  border-radius: 1em;
 }
 
 #mainContainer .graphContainer #textC2{
   background-color: #3FA34D;
+  margin: 0.5em;
+  border-radius: 1em;
 }
 
 #mainContainer .graphContainer #textC3{
   background-color: #9FFFF5;
+  margin: 0.5em;
+  border-radius: 1em;
 }
 
 #mainContainer .graphContainer #textC4{
   background-color: #A1869E;
+  margin: 0.5em;
+  border-radius: 1em;
 }
 
 p{
   padding: 0.25em;
   border: 4px solid #8F8F8F;
   border-radius: 1em;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+h4{
+  font-family: 'M PLUS Rounded 1c', sans-serif !important;
 }
 
 #display1, #display2, #display3, #display4{
@@ -142,9 +165,8 @@ p{
 #display-filter1, #display-filter2, #display-filter3, #display-filter4{
   margin-top: 2em;
   padding: 0.5em;
-  border: 2px solid black;
+  border: 2px solid #8F8F8F;
   border-radius: 0.5em;
 }
-
 
 /* end */
