@@ -3,6 +3,11 @@ h1{
   font-family: 'Amatic SC', cursive !important;
 }
 
+h6{
+  font-size: 2em !important;
+  font-family: 'Amatic SC', cursive !important;
+}
+
 body {
   background-color: #D0D0D0 !important;
 }
